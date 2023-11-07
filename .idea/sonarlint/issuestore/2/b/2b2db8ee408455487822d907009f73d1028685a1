@@ -1,0 +1,8 @@
+
+U
+java:S2755'"3Disable access to external entities in XML parsing.(ÂÿÕ‹ÿÿÿÿÿ8‚»—¸º1
+y
+java:S1450"]Remove the "currentElement" field and declare it as a local variable in the relevant methods.(†›Q8¿Û–¸º1
+>	java:S131@""Add a default case to this switch.(‰ÕÈı8Š»—¸º1
+N
+java:S1068"2Remove this unused "currentElement" private field.(†›Q8ÈÛ–¸º1
