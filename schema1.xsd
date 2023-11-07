@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="Candies" type="candies"/>
+
+  <xs:element name="Candy" type="candy"/>
+
+  <xs:complexType name="candies">
+    <xs:sequence>
+      <xs:element ref="Candy" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="candy">
+    <xs:sequence>
+      <xs:element name="Id" type="xs:int" minOccurs="0"/>
+      <xs:element name="Name" type="xs:string" minOccurs="0"/>
+      <xs:element name="Energy" type="xs:int"/>
+      <xs:element name="Type" type="candyType" minOccurs="0"/>
+      <xs:element name="Ingredients">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="entry" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="key" minOccurs="0" type="xs:string"/>
+                  <xs:element name="value" minOccurs="0" type="xs:int"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Value">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="entry" minOccurs="0" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="key" minOccurs="0" type="xs:string"/>
+                  <xs:element name="value" minOccurs="0" type="xs:int"/>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Production" type="xs:string" minOccurs="0"/>
+      <xs:element name="ProductionDate" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="candyType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Hard"/>
+      <xs:enumeration value="Soft"/>
+      <xs:enumeration value="Chewy"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>
+

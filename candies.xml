@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Candies>
+    <Candy>
+        <Id>1</Id>
+        <Name>Candy Name</Name>
+        <Energy>2</Energy>
+        <Type>Chewy</Type>
+        <Ingredients>
+            <entry>
+                <key>c</key>
+                <value>3</value>
+            </entry>
+            <entry>
+                <key>b</key>
+                <value>2</value>
+            </entry>
+            <entry>
+                <key>a</key>
+                <value>1</value>
+            </entry>
+        </Ingredients>
+        <Value>
+            <entry>
+                <key>val3</key>
+                <value>3</value>
+            </entry>
+            <entry>
+                <key>val2</key>
+                <value>2</value>
+            </entry>
+            <entry>
+                <key>val1</key>
+                <value>3</value>
+            </entry>
+        </Value>
+        <Production>production</Production>
+        <ProductionDate>2023-11-07 02:06:15</ProductionDate>
+    </Candy>
+    <Candy>
+        <Id>2</Id>
+        <Name>Candy Name2</Name>
+        <Energy>221312</Energy>
+        <Type>Hard</Type>
+        <Ingredients>
+            <entry>
+                <key>z</key>
+                <value>3</value>
+            </entry>
+            <entry>
+                <key>y</key>
+                <value>2</value>
+            </entry>
+            <entry>
+                <key>x</key>
+                <value>1</value>
+            </entry>
+        </Ingredients>
+        <Value>
+            <entry>
+                <key>val3</key>
+                <value>3</value>
+            </entry>
+            <entry>
+                <key>val2</key>
+                <value>2</value>
+            </entry>
+            <entry>
+                <key>val1</key>
+                <value>3</value>
+            </entry>
+        </Value>
+        <Production>pre production</Production>
+        <ProductionDate>2023-11-07 02:06:15</ProductionDate>
+    </Candy>
+    <Candy>
+        <Id>3</Id>
+        <Name>Candy Name3</Name>
+        <Energy>12312431</Energy>
+        <Type>Soft</Type>
+        <Ingredients>
+            <entry>
+                <key>p</key>
+                <value>3</value>
+            </entry>
+            <entry>
+                <key>u</key>
+                <value>2</value>
+            </entry>
+            <entry>
+                <key>t</key>
+                <value>1</value>
+            </entry>
+        </Ingredients>
+        <Value>
+            <entry>
+                <key>val3</key>
+                <value>3</value>
+            </entry>
+            <entry>
+                <key>val2</key>
+                <value>2</value>
+            </entry>
+            <entry>
+                <key>val1</key>
+                <value>3</value>
+            </entry>
+        </Value>
+        <Production>pre pre production</Production>
+        <ProductionDate>2023-11-07 02:06:15</ProductionDate>
+    </Candy>
+</Candies>
