@@ -1,50 +1,45 @@
-package org.example;
+package org.example.service;
 
 import jakarta.xml.bind.JAXBException;
 import org.example.data.Candies;
 import org.example.data.Candy;
 import org.example.data.CandyType;
-import org.example.parsers.DOM;
-import org.example.parsers.SAX;
-import org.example.parsers.StAX;
-import org.example.service.CandyMarshallingService;
+import org.junit.Test;
 
 import java.io.IOException;
-import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
+import java.util.Objects;
 
-public class App {
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
-    public static final String CANDIES_XML = "./candies.xml";
 
-    public static void main(String[] args) throws JAXBException, IOException {
-        // marshalling and unmarshalling of xml part
-        System.out.println("\t\t\t\t\t\tMARSHALLING AND UNMARSHALLING");
+public class CandyMarshallingServiceTest {
+
+    public static final String PATH = "/Users/maksymkhodakov/IdeaProjects/xml-parsers/XmlParsers/src/test/resources/test.xml";
+
+    @Test
+    public void testMarshal() throws JAXBException, IOException {
         final Candies candies = new Candies();
         candies.setCandies(getCandies());
         CandyMarshallingService candyMarshallingService = new CandyMarshallingService();
-        candyMarshallingService.marshal(candies, CANDIES_XML);
-        final Candies returnedCandies = candyMarshallingService.unmarshal(CANDIES_XML);
-        System.out.println(returnedCandies.getCandies());
+        candyMarshallingService.marshal(candies, PATH);
+        String xml = new String(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("test.xml")).readAllBytes());
+        assertNotNull(xml);
+    }
 
-        // SAX parser work
-        System.out.println("\n\t\t\t\t\t\tSAX PARSER");
-        SAX parser = new SAX();
-        parser.parseDocument(CANDIES_XML);
-        System.out.println(getSorted(parser.getCandies()));
-
-        // DOM parser work
-        System.out.println("\n\t\t\t\t\t\tDOM PARSER");
-        DOM dom = new DOM();
-        System.out.println(getSorted(dom.parseDocument(CANDIES_XML)));
-
-        // StAX parser work
-        System.out.println("\n\t\t\t\t\t\tStAX PARSER");
-        StAX stax = new StAX();
-        System.out.println(getSorted(stax.parseDocument(CANDIES_XML)));
+    @Test
+    public void testUnmarshal() throws JAXBException, IOException {
+        final String path = PATH;
+        final Candies candies = new Candies();
+        candies.setCandies(getCandies());
+        CandyMarshallingService candyMarshallingService = new CandyMarshallingService();
+        candyMarshallingService.marshal(candies, path);
+        Candies result = candyMarshallingService.unmarshal(path);
+        assertNotNull(result);
+        assertEquals(3, result.getCandies().size());
     }
 
     // get candy data
@@ -80,12 +75,5 @@ public class App {
         candy3.setProductionDate(new Date());
 
         return List.of(candy1, candy2, candy3);
-    }
-
-    private static List<Candy> getSorted(List<Candy> candies) {
-        return candies
-                .stream()
-                .sorted(Comparator.comparingInt(Candy::getEnergy))
-                .collect(Collectors.toList());
     }
 }

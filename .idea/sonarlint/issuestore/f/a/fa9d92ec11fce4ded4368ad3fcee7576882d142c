@@ -1,20 +1,20 @@
 
 `
 java:S2259K"CA "NullPointerException" could be thrown; "candy" is nullable here.(ë«Ìê8³â©¸º1
-`
-java:S2259="CA "NullPointerException" could be thrown; "candy" is nullable here.(¤ÿ×Œ8³â©¸º1
 e
-java:S22591"CA "NullPointerException" could be thrown; "candy" is nullable here.(ì“åáÿÿÿÿÿ8³â©¸º1
+java:S2259:"CA "NullPointerException" could be thrown; "candy" is nullable here.(ü¹ž‡ûÿÿÿÿ8³â©¸º1
 e
 java:S2259@"CA "NullPointerException" could be thrown; "candy" is nullable here.(”öÈ¬úÿÿÿÿ8³â©¸º1
-`
-java:S2259C"CA "NullPointerException" could be thrown; "candy" is nullable here.(¢’¥ÿ8³â©¸º1
-e
-java:S2259F"CA "NullPointerException" could be thrown; "candy" is nullable here.(à¦“Ôýÿÿÿÿ8³â©¸º1
 e
 java:S2259-"CA "NullPointerException" could be thrown; "candy" is nullable here.(Úª¡œþÿÿÿÿ8³â©¸º1
 e
-java:S2259:"CA "NullPointerException" could be thrown; "candy" is nullable here.(ü¹ž‡ûÿÿÿÿ8³â©¸º1
+java:S22591"CA "NullPointerException" could be thrown; "candy" is nullable here.(ì“åáÿÿÿÿÿ8³â©¸º1
+e
+java:S2259F"CA "NullPointerException" could be thrown; "candy" is nullable here.(à¦“Ôýÿÿÿÿ8³â©¸º1
+`
+java:S2259="CA "NullPointerException" could be thrown; "candy" is nullable here.(¤ÿ×Œ8³â©¸º1
+`
+java:S2259C"CA "NullPointerException" could be thrown; "candy" is nullable here.(¢’¥ÿ8³â©¸º1
 P
 java:S2755"3Disable access to external entities in XML parsing.(í‡œì8´â©¸º1
 n

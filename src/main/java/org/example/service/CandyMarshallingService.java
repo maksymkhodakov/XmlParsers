@@ -11,17 +11,17 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class CandyMarshallingService {
-    public void marshal(final Candies candies) throws JAXBException, IOException {
+    public void marshal(final Candies candies, final String filepath) throws JAXBException, IOException {
         JAXBContext context = JAXBContext.newInstance(Candies.class);
         Marshaller mar = context.createMarshaller();
         mar.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-        mar.marshal(candies, new File("./candies.xml"));
+        mar.marshal(candies, new File(filepath));
         context.generateSchema(new CustomSchemaOutputResolver());
     }
 
-    public Candies unmarshal(final String filename) throws JAXBException, FileNotFoundException {
+    public Candies unmarshal(final String filepath) throws JAXBException, FileNotFoundException {
         JAXBContext context = JAXBContext.newInstance(Candies.class);
         return (Candies) context.createUnmarshaller()
-                .unmarshal(new FileReader("./" + filename + ".xml"));
+                .unmarshal(new FileReader(filepath));
     }
 }
