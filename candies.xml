@@ -7,6 +7,10 @@
         <Type>Chewy</Type>
         <Ingredients>
             <entry>
+                <key>c</key>
+                <value>3</value>
+            </entry>
+            <entry>
                 <key>b</key>
                 <value>2</value>
             </entry>
@@ -14,12 +18,12 @@
                 <key>a</key>
                 <value>1</value>
             </entry>
-            <entry>
-                <key>c</key>
-                <value>3</value>
-            </entry>
         </Ingredients>
         <Value>
+            <entry>
+                <key>val1</key>
+                <value>3</value>
+            </entry>
             <entry>
                 <key>val3</key>
                 <value>3</value>
@@ -28,13 +32,9 @@
                 <key>val2</key>
                 <value>2</value>
             </entry>
-            <entry>
-                <key>val1</key>
-                <value>3</value>
-            </entry>
         </Value>
         <Production>production</Production>
-        <ProductionDate>2023-11-20 22:17:10</ProductionDate>
+        <ProductionDate>2024-03-11 21:13:11</ProductionDate>
     </Candy>
     <Candy>
         <Id>2</Id>
@@ -43,6 +43,10 @@
         <Type>Hard</Type>
         <Ingredients>
             <entry>
+                <key>x</key>
+                <value>1</value>
+            </entry>
+            <entry>
                 <key>z</key>
                 <value>3</value>
             </entry>
@@ -50,12 +54,12 @@
                 <key>y</key>
                 <value>2</value>
             </entry>
-            <entry>
-                <key>x</key>
-                <value>1</value>
-            </entry>
         </Ingredients>
         <Value>
+            <entry>
+                <key>val1</key>
+                <value>3</value>
+            </entry>
             <entry>
                 <key>val3</key>
                 <value>3</value>
@@ -64,13 +68,9 @@
                 <key>val2</key>
                 <value>2</value>
             </entry>
-            <entry>
-                <key>val1</key>
-                <value>3</value>
-            </entry>
         </Value>
         <Production>pre production</Production>
-        <ProductionDate>2023-11-20 22:17:10</ProductionDate>
+        <ProductionDate>2024-03-11 21:13:11</ProductionDate>
     </Candy>
     <Candy>
         <Id>3</Id>
@@ -79,10 +79,6 @@
         <Type>Soft</Type>
         <Ingredients>
             <entry>
-                <key>t</key>
-                <value>1</value>
-            </entry>
-            <entry>
                 <key>p</key>
                 <value>3</value>
             </entry>
@@ -90,8 +86,16 @@
                 <key>u</key>
                 <value>2</value>
             </entry>
+            <entry>
+                <key>t</key>
+                <value>1</value>
+            </entry>
         </Ingredients>
         <Value>
+            <entry>
+                <key>val1</key>
+                <value>3</value>
+            </entry>
             <entry>
                 <key>val3</key>
                 <value>3</value>
@@ -100,12 +104,8 @@
                 <key>val2</key>
                 <value>2</value>
             </entry>
-            <entry>
-                <key>val1</key>
-                <value>3</value>
-            </entry>
         </Value>
         <Production>pre pre production</Production>
-        <ProductionDate>2023-11-20 22:17:10</ProductionDate>
+        <ProductionDate>2024-03-11 21:13:11</ProductionDate>
     </Candy>
 </Candies>

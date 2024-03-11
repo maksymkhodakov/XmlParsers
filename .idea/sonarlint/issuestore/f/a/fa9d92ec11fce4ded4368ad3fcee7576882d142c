@@ -1,25 +1,25 @@
 
+e
+java:S2259@"CA "NullPointerException" could be thrown; "candy" is nullable here.(”öÈ¬úÿÿÿÿ8…¼½÷â1
 `
-java:S2259K"CA "NullPointerException" could be thrown; "candy" is nullable here.(ë«Ìê8³â©¸º1
+java:S2259C"CA "NullPointerException" could be thrown; "candy" is nullable here.(¢’¥ÿ8†¼½÷â1
 e
-java:S2259:"CA "NullPointerException" could be thrown; "candy" is nullable here.(ü¹ž‡ûÿÿÿÿ8³â©¸º1
+java:S2259:"CA "NullPointerException" could be thrown; "candy" is nullable here.(ü¹ž‡ûÿÿÿÿ8†¼½÷â1
 e
-java:S2259@"CA "NullPointerException" could be thrown; "candy" is nullable here.(”öÈ¬úÿÿÿÿ8³â©¸º1
-e
-java:S2259-"CA "NullPointerException" could be thrown; "candy" is nullable here.(Úª¡œþÿÿÿÿ8³â©¸º1
-e
-java:S22591"CA "NullPointerException" could be thrown; "candy" is nullable here.(ì“åáÿÿÿÿÿ8³â©¸º1
-e
-java:S2259F"CA "NullPointerException" could be thrown; "candy" is nullable here.(à¦“Ôýÿÿÿÿ8³â©¸º1
+java:S22591"CA "NullPointerException" could be thrown; "candy" is nullable here.(ì“åáÿÿÿÿÿ8†¼½÷â1
 `
-java:S2259="CA "NullPointerException" could be thrown; "candy" is nullable here.(¤ÿ×Œ8³â©¸º1
+java:S2259="CA "NullPointerException" could be thrown; "candy" is nullable here.(¤ÿ×Œ8†¼½÷â1
+e
+java:S2259-"CA "NullPointerException" could be thrown; "candy" is nullable here.(Úª¡œþÿÿÿÿ8†¼½÷â1
 `
-java:S2259C"CA "NullPointerException" could be thrown; "candy" is nullable here.(¢’¥ÿ8³â©¸º1
+java:S2259K"CA "NullPointerException" could be thrown; "candy" is nullable here.(ë«Ìê8†¼½÷â1
+e
+java:S2259F"CA "NullPointerException" could be thrown; "candy" is nullable here.(à¦“Ôýÿÿÿÿ8†¼½÷â1
 P
-java:S2755"3Disable access to external entities in XML parsing.(í‡œì8´â©¸º1
-n
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(×±¿8µâ©¸º1
-C	java:S131&""Add a default case to this switch.(œç¹§ùÿÿÿÿ8·â©¸º1
-C	java:S1318""Add a default case to this switch.(œç¹§ùÿÿÿÿ8¸â©¸º1
-â
-java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 77 to 64, Complexity from 20 to 14, Nesting Level from 6 to 2, Number of Variables from 16 to 6.(×±¿8ºâ©¸º1
+java:S2755"3Disable access to external entities in XML parsing.(í‡œì8‡¼½÷â1
+”
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(×±¿8µâ©¸º1J$8cec9986-ab75-42ae-8864-853cdcf7409d
+i	java:S131&""Add a default case to this switch.(œç¹§ùÿÿÿÿ8·â©¸º1J$66639e9f-b975-48e9-8507-e4b97e95a60d
+i	java:S1318""Add a default case to this switch.(œç¹§ùÿÿÿÿ8¸â©¸º1J$d6ccaa10-61ca-42c6-bc5e-4d7d257c3964
+ˆ
+java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 77 to 64, Complexity from 20 to 14, Nesting Level from 6 to 2, Number of Variables from 16 to 6.(×±¿8ºâ©¸º1J$a450ab32-1899-4c18-8f2d-33e6b40342ec

@@ -74,8 +74,6 @@ Q.idea/sonarlint/securityhotspotstore/1/9/1919b62de0935aa3568bf84fd7c243186ab349
 Q.idea/sonarlint/securityhotspotstore/2/b/2b2db8ee408455487822d907009f73d1028685a1,d/4/d45cca45e787007a8510c76e2994ef13654be911
 r
 Bsrc/test/java/org/example/service/CandyMarshallingServiceTest.java,c/9/c9d062b1e52a07e982f62470f82ee538769a0daa
-8
-test.xml,1/3/133b8a15f0efac6ddd9a373516c634f1fb2919a7
 ^
 .src/test/java/org/example/parsers/DOMTest.java,c/6/c644230001c807a4a88eca7e5c351c937b423b76
 ^
@@ -83,11 +81,7 @@ Bsrc/test/java/org/example/service/CandyMarshallingServiceTest.java,c/9/c9d062b
 _
 /src/test/java/org/example/parsers/StAXTest.java,5/8/5819a9d8860d8d0fb9d3df1bc37cc633b821dbae
 w
-G.idea/sonarlint/issuestore/1/3/133b8a15f0efac6ddd9a373516c634f1fb2919a7,8/3/8378d2d221c72356f90a596f9334d52350336c52
-w
 G.idea/sonarlint/issuestore/5/6/56c5f9601a852028b24d36b3356b292d9ac1ac8d,8/9/894ac06d75059d0628d2227ca42f66f749214ff8
-Å
-Q.idea/sonarlint/securityhotspotstore/1/3/133b8a15f0efac6ddd9a373516c634f1fb2919a7,2/c/2c4d94925433385460fb3b374126f8771fdbdf6d
 w
 G.idea/sonarlint/issuestore/9/f/9fe84ebb15faf917b7def6236dba604453cc61e0,f/0/f0e0f9cec86fe4b939ae22be5264c758801eb28f
 \
