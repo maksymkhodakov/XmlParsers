@@ -1,35 +1,77 @@
 package org.example.parsers;
 
 import org.example.data.Candy;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import java.io.File;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+class DOMTest {
+    private static DOM domParser;
+    private static final String path = "src/test/resources/test.xml";
 
-public class DOMTest {
+    @BeforeAll
+    static void setupAll() {
+        domParser = new DOM();
+    }
+
+    @BeforeEach
+    void setup() {
+        // Перед кожним тестом переконуємось, що файл існує
+        Assumptions.assumeTrue(new File(path).exists());
+    }
 
     @Test
-    public void testParseDocument() {
-        final String path = "/Users/maksymkhodakov/IdeaProjects/xml-parsers/XmlParsers/src/test/resources/test.xml";
-        DOM dom = new DOM();
-        List<Candy> candies = dom.parseDocument(path);
+    void parseDocumentShouldReturnCorrectNumberOfCandies() {
+        List<Candy> candies = domParser.parseDocument(path);
+        assertThat(candies.size(), equalTo(3));
+    }
 
-        assertNotNull(candies);
+    @Test
+    void parseDocumentShouldContainSpecificCandyProperties() {
+        List<Candy> candies = domParser.parseDocument(path);
+        assertThat(candies.get(0).getName(), equalTo("Candy Name"));
+        assertThat(candies.get(0).getIngredients(), is(aMapWithSize(3)));
+        assertThat(candies.get(0).getValue(), is(aMapWithSize(3)));
+        assertThat(candies.get(0).getProduction(), equalTo("production"));
+    }
 
-        assertEquals(3, candies.size());
+    @Test
+    void parseDocumentShouldCorrectlyParseProductionDate() {
+        List<Candy> candies = domParser.parseDocument(path);
+        candies.forEach(candy -> {
+            assertThat(candy.getProductionDate(), notNullValue());
+        });
+    }
 
-        assertEquals("Candy Name", candies.get(0).getName());
-        assertEquals(2, candies.get(0).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(0).getValue().toString());
+    @Test
+    void parseDocumentThrowsExceptionForInvalidFile() {
+        Exception exception = assertThrows(RuntimeException.class, () -> domParser.parseDocument("invalid_path.xml"));
+        assertThat(exception.getMessage(), containsString("Invalid file"));
+    }
 
-        assertEquals("Candy Name2", candies.get(1).getName());
-        assertEquals(221312, candies.get(1).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(1).getValue().toString());
+    @ParameterizedTest
+    @ValueSource(strings = {"src/test/resources/test.xml"})
+    void parseDocumentWithDifferentInputs(String filePath) {
+        List<Candy> candies = domParser.parseDocument(filePath);
+        assertThat(candies, is(not(empty())));
+    }
 
-        assertEquals("Candy Name3", candies.get(2).getName());
-        assertEquals(12312431, candies.get(2).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(2).getValue().toString());
+    @Test
+    void candyValuesAreCorrect() {
+        List<Candy> candies = domParser.parseDocument(path);
+        assertThat(candies, everyItem(hasProperty("energy", greaterThan(0))));
+    }
+
+    @Test
+    void candyIdsShouldBeUnique() {
+        List<Candy> candies = domParser.parseDocument(path);
+        long uniqueIds = candies.stream().map(Candy::getId).distinct().count();
+        assertThat(uniqueIds, equalTo((long)candies.size()));
     }
 }

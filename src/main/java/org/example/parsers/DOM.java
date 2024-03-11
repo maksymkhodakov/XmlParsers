@@ -14,6 +14,10 @@ import java.util.*;
 
 public class DOM {
     public List<Candy> parseDocument(String filePath) {
+        final boolean exists = new File(filePath).exists();
+        if (!exists) {
+            throw new RuntimeException("Invalid file");
+        }
         List<Candy> candies = new ArrayList<>();
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
