@@ -1,36 +1,68 @@
 package org.example.parsers;
 
 import org.example.data.Candy;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import org.junit.jupiter.api.Assertions;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertAll;
 
+import java.io.File;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+class StAXTest {
+    private static StAX staxParser;
+    private static final String VALID_PATH = "src/test/resources/test.xml";
+    private static final String INVALID_PATH = "invalid_path.xml";
 
-public class StAXTest {
+    @BeforeAll
+    static void setupAll() {
+        staxParser = new StAX();
+    }
+
+    @BeforeEach
+    void setup() {
+        Assertions.assertTrue(new File(VALID_PATH).exists(), "Test XML file must exist");
+    }
 
     @Test
-    public void testParseDocument() {
-        final String path = "/Users/maksymkhodakov/IdeaProjects/xml-parsers/XmlParsers/src/test/resources/test.xml";
-        StAX stax = new StAX();
+    void parseDocumentShouldReturnCorrectNumberOfCandies() {
+        List<Candy> candies = staxParser.parseDocument(VALID_PATH);
+        assertThat(candies, hasSize(3));
+    }
 
-        List<Candy> candies = stax.parseDocument(path);
+    @Test
+    void parseDocumentShouldContainExpectedCandyData() {
+        List<Candy> candies = staxParser.parseDocument(VALID_PATH);
+        Candy firstCandy = candies.get(0);
+        assertAll("Checking first Candy data",
+                () -> Assertions.assertEquals(1, firstCandy.getId()),
+                () -> Assertions.assertEquals("Candy Name", firstCandy.getName()),
+                () -> Assertions.assertEquals("Chewy", firstCandy.getType().toString()),
+                () -> assertThat(firstCandy.getIngredients(), is(aMapWithSize(3)))
+        );
+    }
 
-        assertNotNull(candies);
+    @Test
+    void parseDocumentShouldHandleException() {
+        Assertions.assertThrows(Exception.class, () -> staxParser.parseDocument(INVALID_PATH));
+    }
 
-        assertEquals(3, candies.size());
+    @ParameterizedTest
+    @ValueSource(strings = {VALID_PATH})
+    void parseDocumentWithParameterizedPath(String path) {
+        List<Candy> candies = staxParser.parseDocument(path);
+        assertThat("Candies list should not be empty", candies, is(not(empty())));
+    }
 
-        assertEquals("Candy Name", candies.get(0).getName());
-        assertEquals(2, candies.get(0).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(0).getValue().toString());
-
-        assertEquals("Candy Name2", candies.get(1).getName());
-        assertEquals(221312, candies.get(1).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(1).getValue().toString());
-
-        assertEquals("Candy Name3", candies.get(2).getName());
-        assertEquals(12312431, candies.get(2).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(2).getValue().toString());
+    @Test
+    void candyIdsShouldBeUnique() {
+        List<Candy> candies = staxParser.parseDocument(VALID_PATH);
+        long uniqueIdsCount = candies.stream().map(Candy::getId).distinct().count();
+        Assertions.assertEquals(candies.size(), uniqueIdsCount, "Candy IDs should be unique");
     }
 }
+

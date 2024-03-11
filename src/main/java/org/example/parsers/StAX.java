@@ -10,6 +10,7 @@ import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
+import java.io.File;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Date;
@@ -20,6 +21,10 @@ import java.util.Map;
 public class StAX {
 
     public List<Candy> parseDocument(String filePath) {
+        final boolean exists = new File(filePath).exists();
+        if (!exists) {
+            throw new RuntimeException("Invalid file");
+        }
         List<Candy> candies = new ArrayList<>();
         Candy candy = null;
         XMLInputFactory xmlInputFactory = XMLInputFactory.newInstance();

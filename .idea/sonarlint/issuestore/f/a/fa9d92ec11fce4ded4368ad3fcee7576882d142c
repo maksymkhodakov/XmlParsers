@@ -1,25 +1,26 @@
 
-e
-java:S2259@"CA "NullPointerException" could be thrown; "candy" is nullable here.(”öÈ¬úÿÿÿÿ8…¼½÷â1
-`
-java:S2259C"CA "NullPointerException" could be thrown; "candy" is nullable here.(¢’¥ÿ8†¼½÷â1
-e
-java:S2259:"CA "NullPointerException" could be thrown; "candy" is nullable here.(ü¹ž‡ûÿÿÿÿ8†¼½÷â1
-e
-java:S22591"CA "NullPointerException" could be thrown; "candy" is nullable here.(ì“åáÿÿÿÿÿ8†¼½÷â1
-`
-java:S2259="CA "NullPointerException" could be thrown; "candy" is nullable here.(¤ÿ×Œ8†¼½÷â1
-e
-java:S2259-"CA "NullPointerException" could be thrown; "candy" is nullable here.(Úª¡œþÿÿÿÿ8†¼½÷â1
-`
-java:S2259K"CA "NullPointerException" could be thrown; "candy" is nullable here.(ë«Ìê8†¼½÷â1
-e
-java:S2259F"CA "NullPointerException" could be thrown; "candy" is nullable here.(à¦“Ôýÿÿÿÿ8†¼½÷â1
-P
-java:S2755"3Disable access to external entities in XML parsing.(í‡œì8‡¼½÷â1
+ˆ	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(à’õû8Àô´ùâ1J$14926dbc-42b6-4afa-b830-9a3edf148876
+‹
+java:S22596"CA "NullPointerException" could be thrown; "candy" is nullable here.(ì“åáÿÿÿÿÿ8†¼½÷â1J$43a78120-59a6-48e4-ba36-7f10d8c96130
+†
+java:S2259B"CA "NullPointerException" could be thrown; "candy" is nullable here.(¤ÿ×Œ8†¼½÷â1J$207f3cae-c65a-48d8-bd06-9ae193e2abe6
+‹
+java:S22592"CA "NullPointerException" could be thrown; "candy" is nullable here.(Úª¡œþÿÿÿÿ8†¼½÷â1J$53c8995c-654d-41c2-b0ec-6e94e94c01fb
+†
+java:S2259P"CA "NullPointerException" could be thrown; "candy" is nullable here.(ë«Ìê8†¼½÷â1J$b4df90f5-0d50-480a-abc5-02fd3461e956
+‹
+java:S2259E"CA "NullPointerException" could be thrown; "candy" is nullable here.(”öÈ¬úÿÿÿÿ8…¼½÷â1J$1d4c4d4c-0313-4358-b433-95c952bdda6b
+†
+java:S2259H"CA "NullPointerException" could be thrown; "candy" is nullable here.(¢’¥ÿ8†¼½÷â1J$1a1f6743-95a0-4079-956b-dc0cfe2242c2
+‹
+java:S2259?"CA "NullPointerException" could be thrown; "candy" is nullable here.(ü¹ž‡ûÿÿÿÿ8†¼½÷â1J$28d065fa-51a4-4016-a609-522713cf8e13
+‹
+java:S2259K"CA "NullPointerException" could be thrown; "candy" is nullable here.(à¦“Ôýÿÿÿÿ8†¼½÷â1J$9f2c1c90-1432-4b12-a212-60267386534b
+v
+java:S2755"3Disable access to external entities in XML parsing.(í‡œì8‡¼½÷â1J$cfe38dcb-98d2-4950-825e-52fefbaa77f8
 ”
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 25 to the 15 allowed.(×±¿8µâ©¸º1J$8cec9986-ab75-42ae-8864-853cdcf7409d
-i	java:S131&""Add a default case to this switch.(œç¹§ùÿÿÿÿ8·â©¸º1J$66639e9f-b975-48e9-8507-e4b97e95a60d
-i	java:S1318""Add a default case to this switch.(œç¹§ùÿÿÿÿ8¸â©¸º1J$d6ccaa10-61ca-42c6-bc5e-4d7d257c3964
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(×±¿8µâ©¸º1J$072be21b-c87c-41c5-893a-d5f3f07ad0f8
+i	java:S131+""Add a default case to this switch.(œç¹§ùÿÿÿÿ8·â©¸º1J$88d001ca-548a-4811-a755-71bce92510b9
+i	java:S131=""Add a default case to this switch.(œç¹§ùÿÿÿÿ8¸â©¸º1J$f12a73b0-6f6f-49ba-b4c8-fcc2f86ddac2
 ˆ
-java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 77 to 64, Complexity from 20 to 14, Nesting Level from 6 to 2, Number of Variables from 16 to 6.(×±¿8ºâ©¸º1J$a450ab32-1899-4c18-8f2d-33e6b40342ec
+java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 81 to 64, Complexity from 21 to 14, Nesting Level from 6 to 2, Number of Variables from 17 to 6.(×±¿8ºâ©¸º1J$a2b75f72-fbac-480f-9a52-7658420e9b94
