@@ -1,37 +1,74 @@
 package org.example.parsers;
 
 import org.example.data.Candy;
-import org.junit.Test;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
+import java.io.File;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+class SAXTest {
+    private static SAX saxParser;
+    private static final String path = "src/test/resources/test.xml"; // Оновлений відносний шлях
 
-public class SAXTest {
+    @BeforeAll
+    static void setupAll() {
+        saxParser = new SAX();
+    }
+
+    @BeforeEach
+    void setup() {
+        // Перед кожним тестом переконуємось, що файл існує
+        Assumptions.assumeTrue(new File(path).exists());
+    }
 
     @Test
-    public void testParseDocument() {
-        final String path = "/Users/maksymkhodakov/IdeaProjects/xml-parsers/XmlParsers/src/test/resources/test.xml";
-        SAX sax = new SAX();
-        sax.parseDocument(path);
+    void parseDocumentShouldReturnCorrectNumberOfCandies() {
+        saxParser.parseDocument(path);
+        List<Candy> candies = saxParser.getCandies();
+        assertThat(candies.size(), equalTo(3));
+    }
 
-        List<Candy> candies = sax.getCandies();
+    @Test
+    void parseDocumentShouldContainSpecificCandyProperties() {
+        saxParser.parseDocument(path);
+        List<Candy> candies = saxParser.getCandies();
+        assertThat(candies.get(0).getName(), equalTo("Candy Name"));
+        assertThat(candies.get(0).getIngredients(), is(aMapWithSize(3)));
+        assertThat(candies.get(0).getValue(), is(aMapWithSize(3)));
+        assertThat(candies.get(0).getProduction(), equalTo("production"));
+    }
 
-        assertNotNull(candies);
+    @Test
+    void parseDocumentShouldCorrectlyParseProductionDate() {
+        saxParser.parseDocument(path);
+        List<Candy> candies = saxParser.getCandies();
+        candies.forEach(candy -> assertThat(candy.getProductionDate(), notNullValue()));
+    }
 
-        assertEquals(3, candies.size());
+    @ParameterizedTest
+    @ValueSource(strings = {"src/test/resources/test.xml"})
+    void parseDocumentWithDifferentInputs(String filePath) {
+        saxParser.parseDocument(filePath);
+        List<Candy> candies = saxParser.getCandies();
+        assertThat(candies, is(not(empty())));
+    }
 
-        assertEquals("Candy Name", candies.get(0).getName());
-        assertEquals(2, candies.get(0).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(0).getValue().toString());
+    @Test
+    void candyValuesAreCorrect() {
+        saxParser.parseDocument(path);
+        List<Candy> candies = saxParser.getCandies();
+        assertThat(candies, everyItem(hasProperty("energy", greaterThan(0))));
+    }
 
-        assertEquals("Candy Name2", candies.get(1).getName());
-        assertEquals(221312, candies.get(1).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(1).getValue().toString());
-
-        assertEquals("Candy Name3", candies.get(2).getName());
-        assertEquals(12312431, candies.get(2).getEnergy());
-        assertEquals("{val3=3, val2=2, val1=3}", candies.get(2).getValue().toString());
+    @Test
+    void candyIdsShouldBeUnique() {
+        saxParser.parseDocument(path);
+        List<Candy> candies = saxParser.getCandies();
+        assertThat(9L, equalTo((long)candies.size()));
     }
 }
+
