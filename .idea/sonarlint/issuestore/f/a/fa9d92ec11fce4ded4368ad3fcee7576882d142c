@@ -1,26 +1,26 @@
 
-ˆ	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(à’õû8Àô´ùâ1J$14926dbc-42b6-4afa-b830-9a3edf148876
-‹
-java:S22596"CA "NullPointerException" could be thrown; "candy" is nullable here.(ì“åáÿÿÿÿÿ8†¼½÷â1J$43a78120-59a6-48e4-ba36-7f10d8c96130
+ˆ	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(à’õû8Àô´ùâ1J$eda405aa-1039-4b63-b195-0314bf08653c
 †
-java:S2259B"CA "NullPointerException" could be thrown; "candy" is nullable here.(¤ÿ×Œ8†¼½÷â1J$207f3cae-c65a-48d8-bd06-9ae193e2abe6
-‹
-java:S22592"CA "NullPointerException" could be thrown; "candy" is nullable here.(Úª¡œþÿÿÿÿ8†¼½÷â1J$53c8995c-654d-41c2-b0ec-6e94e94c01fb
+java:S2259B"CA "NullPointerException" could be thrown; "candy" is nullable here.(¤ÿ×Œ8†¼½÷â1J$13c18907-634d-4a3f-8d5b-7a12beda1e0e
 †
-java:S2259P"CA "NullPointerException" could be thrown; "candy" is nullable here.(ë«Ìê8†¼½÷â1J$b4df90f5-0d50-480a-abc5-02fd3461e956
+java:S2259H"CA "NullPointerException" could be thrown; "candy" is nullable here.(¢’¥ÿ8†¼½÷â1J$381e6034-6b0b-4944-88e9-d4b3434e8d53
 ‹
-java:S2259E"CA "NullPointerException" could be thrown; "candy" is nullable here.(”öÈ¬úÿÿÿÿ8…¼½÷â1J$1d4c4d4c-0313-4358-b433-95c952bdda6b
+java:S2259E"CA "NullPointerException" could be thrown; "candy" is nullable here.(”öÈ¬úÿÿÿÿ8…¼½÷â1J$0c45c73a-98f8-4cf5-91e1-8468d4dba78b
+‹
+java:S2259?"CA "NullPointerException" could be thrown; "candy" is nullable here.(ü¹ž‡ûÿÿÿÿ8†¼½÷â1J$5fcad53a-9546-4ed2-9a92-d12fa14e9e8c
+‹
+java:S22596"CA "NullPointerException" could be thrown; "candy" is nullable here.(ì“åáÿÿÿÿÿ8†¼½÷â1J$f2128193-5e22-45b9-b716-c5992cd8c7a4
+‹
+java:S2259K"CA "NullPointerException" could be thrown; "candy" is nullable here.(à¦“Ôýÿÿÿÿ8†¼½÷â1J$348aaa38-83f4-4cd3-8e63-1f81dc29c2ad
 †
-java:S2259H"CA "NullPointerException" could be thrown; "candy" is nullable here.(¢’¥ÿ8†¼½÷â1J$1a1f6743-95a0-4079-956b-dc0cfe2242c2
+java:S2259P"CA "NullPointerException" could be thrown; "candy" is nullable here.(ë«Ìê8†¼½÷â1J$57a52305-d158-479e-af59-63e330742182
 ‹
-java:S2259?"CA "NullPointerException" could be thrown; "candy" is nullable here.(ü¹ž‡ûÿÿÿÿ8†¼½÷â1J$28d065fa-51a4-4016-a609-522713cf8e13
-‹
-java:S2259K"CA "NullPointerException" could be thrown; "candy" is nullable here.(à¦“Ôýÿÿÿÿ8†¼½÷â1J$9f2c1c90-1432-4b12-a212-60267386534b
+java:S22592"CA "NullPointerException" could be thrown; "candy" is nullable here.(Úª¡œþÿÿÿÿ8†¼½÷â1J$81de342b-c29c-4583-b418-4e370d6f65bb
 v
-java:S2755"3Disable access to external entities in XML parsing.(í‡œì8‡¼½÷â1J$cfe38dcb-98d2-4950-825e-52fefbaa77f8
+java:S2755"3Disable access to external entities in XML parsing.(í‡œì8‡¼½÷â1J$7921a52b-5bd4-40d2-aea2-5caf157d74df
 ”
-java:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(×±¿8µâ©¸º1J$072be21b-c87c-41c5-893a-d5f3f07ad0f8
-i	java:S131+""Add a default case to this switch.(œç¹§ùÿÿÿÿ8·â©¸º1J$88d001ca-548a-4811-a755-71bce92510b9
-i	java:S131=""Add a default case to this switch.(œç¹§ùÿÿÿÿ8¸â©¸º1J$f12a73b0-6f6f-49ba-b4c8-fcc2f86ddac2
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(×±¿8µâ©¸º1J$8523ab91-62c5-47d4-8dde-cbee4ca1ef6f
+i	java:S131+""Add a default case to this switch.(œç¹§ùÿÿÿÿ8·â©¸º1J$9f477a06-e880-4b6f-abf9-7f4de38f34bc
+i	java:S131=""Add a default case to this switch.(œç¹§ùÿÿÿÿ8¸â©¸º1J$4dd18d2c-67d3-4288-9e15-59fb49fa0796
 ˆ
-java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 81 to 64, Complexity from 21 to 14, Nesting Level from 6 to 2, Number of Variables from 17 to 6.(×±¿8ºâ©¸º1J$a2b75f72-fbac-480f-9a52-7658420e9b94
+java:S6541"ÅA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 81 to 64, Complexity from 21 to 14, Nesting Level from 6 to 2, Number of Variables from 17 to 6.(×±¿8ºâ©¸º1J$ee167b2d-1ec2-4941-9a3e-18c9b6441e10

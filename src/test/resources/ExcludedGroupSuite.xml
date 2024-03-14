@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ExcludedGroupSuite">
+    <test name="WithoutExceptionTests">
+        <groups>
+            <run>
+                <include name="functional"/>
+                <include name="property"/>
+                <exclude name="exception"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="org.example.parsers.DOMTestNGTest"/>
+        </classes>
+    </test>
+</suite>
